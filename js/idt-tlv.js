@@ -27,26 +27,18 @@ $( document ).ready(function() {
 function generateSampleData() {
   
   console.log('Generating sample DB - remove before launch!');
-  data = generateAllValidPrimitiveTags();
+  data = createSamplePrimitiveDB();
+  console.log(data);
+  populateTable();
 
 }
 
 function populateTable() {
-
-
-  // <th data-field="tag">Tag</th>
-  // <th data-field="name">Name</th>
-  // <th data-field="format">Format</th>             
-  // <th data-field="length">Length</th>
-  // <th data-field="description">Description</th>
-  // <th data-field="comments">Comments</th>
-  // <th data-field="default">Default Value</th> 
-  // <th data-field="detailed">Detailed Information</th>
   
 
    for (var i = 0; i < data.length; ++i){
       $( "<tr id='tlv-" + i + "'>" +
-      '<td class="tlv-tag">' + data[i] + '</td>' +
+      '<td class="tlv-tag">' + data[i].tag + '</td>' +
       '<td class="tlv-name">' + " " + '</td>' +
       '<td class="tlv-format">' + " " + '</td>' +
       '<td class="tlv-length">' + " " + '</td>' +

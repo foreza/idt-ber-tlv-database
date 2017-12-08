@@ -33,6 +33,8 @@
 
 
 
+
+
 // This function will generate all of the IDTECH possible primitive tags. 
 function generateAllValidPrimitiveTags() {
 
@@ -94,3 +96,41 @@ function returnTLVString(arr) {
     // console.log(str);
     return str;
 }
+
+
+// Declare a function that will create a sample primitive DB 
+
+function createSamplePrimitiveDB() {
+    
+        var primitiveDB = [];
+    
+        // Generate all valid primitive tags
+        var gen = generateAllValidPrimitiveTags();
+
+        for (var i = 0; i < gen.length; ++i){
+
+            var t = {
+                tag : gen[i],
+                tagName : "",
+                tagFormat : "",
+                tagLength : 0,
+                tagDescription : "",
+                tagComments : "",
+                tagDefault : "",
+                tagDetailed : {
+                    dateCreated : "",
+                    dateModified : "",
+                    supportedDevices: [],
+                    additional: "",
+                }
+            }
+            
+            primitiveDB.push(t);
+            console.log('pushed: ', t);
+
+        }
+    
+        console.log("primitive, ", primitiveDB);
+        return primitiveDB;
+    
+    }
