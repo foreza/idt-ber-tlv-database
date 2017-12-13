@@ -79,7 +79,8 @@ function returnTLVString(arr) {
 
     for (var i = 0; i < arr.length; ++i) {
 
-        var hex = arr[i].toString(16);      // Convert the selected index to HEX
+        var hex = arr[i].toString(16).toUpperCase();      // Convert the selected index to HEX
+        
 
         // If the converted hex digit is one character, we have to correct it. ie: 0xA needs to be 0x0A
 
@@ -111,26 +112,21 @@ function createSamplePrimitiveDB() {
 
             var t = {
                 tag : gen[i],
-                tagName : "",
-                tagFormat : "",
+                tagName : "I did the thing",
+                tagFormat : "b",
                 tagLength : 0,
-                tagDescription : "",
-                tagComments : "",
-                tagDefault : "",
-                tagDetailed : {
-                    dateCreated : "",
-                    dateModified : "",
-                    supportedDevices: [],
-                    additional: "",
-                }
+                tagDescription : "This needs a description",
+                tagComments : "Nuh-uh",
+                tagDefault : gen[i] + "01" + "00",
+                tagDetailed : "More detailed info"
             }
             
             primitiveDB.push(t);
-            console.log('pushed: ', t);
+            // console.log('pushed: ', t);
 
         }
     
-        console.log("primitive, ", primitiveDB);
+        // console.log("primitive, ", primitiveDB);
         return primitiveDB;
     
     }

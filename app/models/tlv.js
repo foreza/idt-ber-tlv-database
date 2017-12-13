@@ -74,9 +74,7 @@ var TLVSchema = new Schema({
         isPublic: {
             type: Boolean,
             default: false
-        },
-
-
+        }
     }
 });
 
@@ -148,27 +146,19 @@ var tlv = {
 
 */
 
-// // Example: 
-// example_tlv = {
-//     tag : "DFEF7D",
-//     tagName : "Re-power on times",
-//     tagFormat : "an",
-//     tagLength : 1,
-//     tagDescription : "For control the times of re-power on ICC card before fall back to MSR",
-//     tagComments : "Used by Augusta device in order to properly pass EMV L3 tests by making the fallback times configurable",
-//     tagDefault : "DFEF7D0103",
-//     tagDetailed : {
-//         dateCreated : {
-//     type: String, 
-//           require: true,
-//           default: 'INVALID'},
-// }
-// //         dateModified : {
-//     type: String, 
-//           require: true,
-//           default: 'INVALID'},
-// }
-//         supportedDevices: [],
-//         additional: "Should be added to all Contact L2",
-//     }
-// }
+// Example TLV used in Postman for posting to api/tlv
+
+/*
+
+{
+    "tag" : "DFEF7D",
+    "tagName" : "Re-power on times",
+    "tagFormat" : "an",
+    "tagLength" : 1,
+    "tagDescription" : "For control the times of re-power on ICC card before fall back to MSR",
+    "tagComments" : "Used by Augusta device in order to properly pass EMV L3 tests by making the fallback times configurable",
+    "tagDefault" : "DFEF7D0103",
+    "tagDetailed" : "More detailed info"
+}
+
+*/
