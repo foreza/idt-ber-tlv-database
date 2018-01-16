@@ -35,6 +35,14 @@ router.post('/', (req, res) => {
 });
 
 
+const patchExistingTLV = existTLV => {
+	console.log("Patching existing TLV");
+
+	// TODO: Implement
+}
+
+
+// This function should only be used if we are expanding the BER-TLV range
 const createNewTLV = newTLV => {
 	console.log("Making new TLV");
 	const { tag, tagName, tagFormat,

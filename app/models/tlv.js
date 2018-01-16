@@ -71,6 +71,10 @@ var TLVSchema = new Schema({
             type: String,
             default: 'IDTECH'
         },
+        isDefined:{
+            type: Boolean,
+            default: false
+        },
         isPublic: {
             type: Boolean,
             default: false

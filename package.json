@@ -9,7 +9,7 @@
     "express": "^4.16.2",
     "moment": "^2.19.4",
     "mongoose": "^4.13.7",
-    "nodemon": "^1.12.5"
+    "nodemon": "^1.14.11"
   },
   "devDependencies": {},
   "scripts": {

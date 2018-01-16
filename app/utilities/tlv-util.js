@@ -12,6 +12,19 @@ tlvUtils.createTLV = newTLV => {
     });
 }
 
+// This utility finds a TLV and updates the values
+tlvUtils.patchTLV = (tlv) => {
+    return new Promise((resolve, reject) => {
+        tlvModel.find({ tlv }, (err, tlv) => {
+            if (err) reject(err);
+            
+            // TODO: Implement
+
+
+        });
+    });
+
+}
 
 // This utility returns a TLV given the TLV Name
 tlvUtils.getTLVByName = (tlv) => {

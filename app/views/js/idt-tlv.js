@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
 
   // TODO: Remove this placeholder
-   generateSampleData();
+   // generateSampleData();
 
   // Do a GET to api/tlv to retrieve a list of tlvs
   $.get( "api/tlv", function( data ) {
@@ -18,6 +18,13 @@ $( document ).ready(function() {
 
 
 
+    
+
+
+// Handle View elements here
+
+  // Initialize Materialize modal class
+  $('.modal').modal();
 
    
 });

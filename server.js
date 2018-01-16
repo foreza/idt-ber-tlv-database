@@ -1,5 +1,14 @@
 // Created by Jason Chiu, 12/12/2017
 
+// TODO
+/*
+
+- Add environmental variables to control debug vs production
+
+
+*/
+
+
 // Add dependencies
 var express = require('express');
 var app = express();
